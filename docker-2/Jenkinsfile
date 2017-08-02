@@ -1,0 +1,30 @@
+node('docker') {
+
+ stage('Preparation (Checking out)') {
+       git branch: 'vitali_ulantsau_day2', url: 'https://github.com/SVLay/docker.git'
+         }
+
+ stage ('Building docker gradle image'){
+	  docker.build ('gradle', '-f docker-2/gradle.Dockerfile .')
+            }
+            
+ dir('docker-2'){
+    stage ('Building code'){
+        docker.image('gradle:latest').inside {
+             sh 'gradle build'
+    	    }
+	       }
+
+	stage ('Deployment'){
+       	        sh 'docker-compose up -d'
+	            }
+
+	stage ('Check'){
+
+	         sh 'sleep 10 && curl -IL http://127.0.0.1:8086'
+             sh 'docker-compose stop jar && docker-compose rm -f jar'
+             }
+
+	        }
+
+ }
