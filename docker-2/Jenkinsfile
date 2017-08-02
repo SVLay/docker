@@ -22,7 +22,6 @@ node('host') {
 	stage ('Check'){
 
 	         sh 'curl -IL http://127.0.0.1:8080'
-             sh '/home/student/.pyenv/shims/docker-compose stop jar && /home/student/.pyenv/shims/docker-compose rm -f jar'
              }
 
 	        }
