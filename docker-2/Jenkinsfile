@@ -16,7 +16,7 @@ node('host') {
 	       }
 
 	stage ('Deployment'){
-       	        sh '/home/student/.pyenv/shims/docker-compose -d'
+       	        sh '/home/student/.pyenv/shims/docker-compose up -d'
 	            }
 
 	stage ('Check'){
