@@ -1,4 +1,4 @@
-node('docker') {
+node('host') {
 
  stage('Preparation (Checking out)') {
        git branch: 'vitali_ulantsau_day2', url: 'https://github.com/SVLay/docker.git'
@@ -26,5 +26,4 @@ node('docker') {
              }
 
 	        }
-
  }
