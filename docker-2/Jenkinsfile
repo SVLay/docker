@@ -18,11 +18,4 @@ node('host') {
 	stage ('Deployment'){
        	        sh '/home/student/.pyenv/shims/docker-compose up -d'
 	            }
-
-	stage ('Check'){
-
-	         sh 'curl -IL http://127.0.0.1:8080'
-             }
-
-	        }
  }
