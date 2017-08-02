@@ -7,11 +7,13 @@
 6. Configure a job to run just built Spring Boot app with docker-compose
 
 
+- Host is connected as slave(master executors number is set to 0, to force running all jobs on the host node)
+<img src="docker-2/pictures/Screenshot from 2017-08-02 12-53-47.png">
 
 - Job is running succesfully
 <img src="docker-2/pictures/Screenshot from 2017-08-02 12-42-27.png">
 
-- docker containers status
+- Docker containers status
 <img src="docker-2/pictures/Screenshot from 2017-08-02 12-43-07.png">
 
 - Spring boot app is running
