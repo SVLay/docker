@@ -19,3 +19,4 @@ node('host') {
        	        sh '/home/student/.pyenv/shims/docker-compose up -d'
 	            }
  }
+ }
