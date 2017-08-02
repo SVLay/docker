@@ -4,12 +4,7 @@ services:
   build:
    context: .
    dockerfile: app.Dockerfile
+   expose: [ "8080" ]
+   ports: [ "8080:8080" ]
   volumes:
       - /home/student/workspace/spring_boot_job/docker-2/build/libs:/opt/
-  ports: 
-      - 127.0.0.1:8080:8080
-    
-    
-      
-
- 
