@@ -6,7 +6,8 @@ services:
    dockerfile: app.Dockerfile
   volumes:
       - /home/student/dockerpop/pipeline/workspace/job1/docker-2/build/libs/:/opt/
-  ports:  [ 8086:8080 ]
+  ports: 
+      - 8086:8080
     
     
       
