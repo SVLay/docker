@@ -16,13 +16,13 @@ node('host') {
 	       }
 
 	stage ('Deployment'){
-       	        sh 'docker-compose up -d'
+       	        sh '/home/student/.pyenv/shims/docker-compose -d'
 	            }
 
 	stage ('Check'){
 
 	         sh 'sleep 10 && curl -IL http://127.0.0.1:8086'
-             sh 'docker-compose stop jar && docker-compose rm -f jar'
+             sh '/home/student/.pyenv/shims/docker-compose stop jar && /home/student/.pyenv/shims/docker-compose rm -f jar'
              }
 
 	        }
